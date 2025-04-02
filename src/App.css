@@ -1,0 +1,161 @@
+/* Reset/Global styles */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* We do NOT use display: flex or justify-content here,
+     so layouts defined in React/MUI won't be overridden */
+  box-sizing: border-box;
+}
+
+/* Optional global background and base font styles */
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* Base font-size */
+}
+
+/* Logo styles (if needed for your spinning logo effect) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Keyframes for logo spin */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keep the spinning animation if desired */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card utility class (if used somewhere) */
+.card {
+  padding: 2em;
+}
+
+/* Example text styling */
+.read-the-docs {
+  color: #888;
+}
+
+/* ===============================
+   Media Queries for Responsiveness
+   =============================== */
+
+/* Extra small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+  
+  .card {
+    padding: 1em;
+  }
+  
+  .read-the-docs {
+    font-size: 12px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 960px) */
+@media (min-width: 600px) and (max-width: 960px) {
+  body {
+    font-size: 15px;
+  }
+  
+  .logo {
+    height: 5em;
+    padding: 1.2em;
+  }
+  
+  .card {
+    padding: 1.5em;
+  }
+  
+  .read-the-docs {
+    font-size: 13px;
+  }
+}
+
+/* Medium devices (landscape tablets, 960px to 1280px) */
+@media (min-width: 960px) and (max-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    font-size: 14px;
+  }
+}
+
+/* Large devices (laptops/desktops, 1280px to 1920px) */
+@media (min-width: 1280px) and (max-width: 1920px) {
+  body {
+    font-size: 17px;
+  }
+  
+  .logo {
+    height: 6.5em;
+    padding: 1.5em;
+  }
+  
+  .card {
+    padding: 2.5em;
+  }
+  
+  .read-the-docs {
+    font-size: 15px;
+  }
+}
+
+/* Extra large devices (large desktops, 1920px and up) */
+@media (min-width: 1920px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .logo {
+    height: 7em;
+    padding: 1.5em;
+  }
+  
+  .card {
+    padding: 3em;
+  }
+  
+  .read-the-docs {
+    font-size: 16px;
+  }
+}
